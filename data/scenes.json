@@ -1,0 +1,154 @@
+{
+  "startScene": "courtyard_intro",
+  "characters": {
+    "narrator": {
+      "name": "Narrator",
+      "color": "#f7f0e8"
+    },
+    "nick wrong": {
+      "name": "Nick Wrong",
+      "color": "#64d2ff"
+    },
+    "kilometers ashworth": {
+      "name": "Kilometers Ashworth",
+      "color": "#ff8fab"
+    }
+  },
+  "scenes": {
+    "courtyard_intro": {
+      "title": "City - Early Morning",
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "It was a warm, sleepless summer's night."
+        },
+        {
+          "speaker": "narrator",
+          "text": "A short, tired, dreary blink was all the sleep the lawyer had seemed to get for the night."
+        },
+        {
+          "speaker": "nick wrong",
+          "text": "This sucks..."
+        },
+        {
+          "speaker": "nick wrong",
+          "text": "Oh!"
+        },
+        {
+          "speaker": "nick wrong",
+          "text": "It looks like I'm not the only one who can't sleep."
+        },
+        {
+          "speaker": "kilometers ashworth",
+          "text": "Ah! Mr Wrong. Are you here to get an early start on the case as well?"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Uh, no.",
+          "nextScene": "honest"
+        },
+        {
+          "text": "You sure bet!",
+          "nextScene": "lie"
+        }
+      ]
+    },
+    "honest": {
+      "title": "Courtyard - Early Morning",
+      "lines": [
+        {
+          "speaker": "kilometers ashworth",
+          "text": "I'm suprised you were honest. I knew you weren't the type."
+        },
+        {
+          "speaker": "nick wrong",
+          "text": "Uh, excuse me?"
+        },
+        {
+          "speaker": "kilometers ashworth",
+          "text": "So, how are you planning on losing in court today?"
+        },
+        {
+          "speaker": "nick wrong",
+          "text": "My client is innocent. That's all I need."
+        }
+      ]
+    },
+    "lie": {
+      "title": "Courtyard - Early Morning",
+      "lines": [
+        {
+          "speaker": "kilometers ashworth",
+          "text": "Hmm."
+        },
+        {
+          "speaker": "kilometers ashworth",
+          "text": "So, how has your preparation on the case been?"
+        },
+        {
+          "speaker": "nick wrong",
+          "text": "I can't discuss that."
+        },
+        {
+          "speaker": "kilometers ashworth",
+          "text": "So you think you have been preparing?"
+        },
+        {
+          "speaker": "nick wrong",
+          "text": "Isn't it too early to be this backhanded?"
+        },
+        {
+          "speaker": "nick wrong",
+          "text": "My client is innocent. That's all I need."
+        }
+      ]
+    },
+    "ask_note": {
+      "title": "Courtyard - The Note",
+      "lines": [
+        {
+          "speaker": "alex",
+          "text": "What did the note say?"
+        },
+        {
+          "speaker": "mira",
+          "text": "Just one sentence: meet me where the bell cannot be heard."
+        },
+        {
+          "speaker": "narrator",
+          "text": "For a moment, even the morning birds seem to go silent."
+        }
+      ],
+      "endText": "Scene complete. Add more choices here to keep branching."
+    },
+    "walk_together": {
+      "title": "Courtyard - Company",
+      "lines": [
+        {
+          "speaker": "alex",
+          "text": "I can walk with you if you want."
+        },
+        {
+          "speaker": "mira",
+          "text": "I would like that. It makes the halls feel less impossible."
+        }
+      ],
+      "endText": "Scene complete. This branch can continue into another scene."
+    },
+    "leave_for_class": {
+      "title": "Hallway - First Bell",
+      "lines": [
+        {
+          "speaker": "alex",
+          "text": "We should get to class before the bell."
+        },
+        {
+          "speaker": "mira",
+          "text": "Right. Mystery later, attendance first."
+        }
+      ],
+      "endText": "Scene complete. This branch can continue into another scene."
+    }
+  }
+}

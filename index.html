@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Text Visual Novel Base</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <section class="scene-panel" aria-live="polite">
+        <div class="scene-header">
+          <p id="scene-title" class="scene-title">Loading scene...</p>
+          <button id="restart-button" class="icon-button" type="button" title="Restart scene">
+            Restart
+          </button>
+        </div>
+
+        <div id="dialogue-log" class="dialogue-log"></div>
+
+        <div class="dialogue-box">
+          <p id="speaker-name" class="speaker-name"></p>
+          <p id="dialogue-text" class="dialogue-text"></p>
+        </div>
+
+        <div id="choice-list" class="choice-list" aria-label="Dialogue choices"></div>
+
+        <button id="continue-button" class="continue-button" type="button">Continue</button>
+      </section>
+    </main>
+
+    <script type="module" src="src/game.js"></script>
+  </body>
+</html>

@@ -1,0 +1,177 @@
+:root {
+  color-scheme: dark;
+  font-family: "Press Start 2P", "Courier New", monospace;
+  background: #151419;
+  color: #f7f0e8;
+  font-size: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background:
+    linear-gradient(rgba(21, 20, 25, 0.34), rgba(21, 20, 25, 0.86)),
+    url("assets/background.png") center / cover fixed;
+}
+
+button {
+  font: inherit;
+}
+
+.game-shell {
+  display: grid;
+  min-height: 100vh;
+  place-items: end center;
+  padding: 32px;
+}
+
+.scene-panel {
+  width: min(960px, 100%);
+  display: grid;
+  gap: 14px;
+}
+
+.scene-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.scene-title {
+  margin: 0;
+  color: #efe2ce;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.icon-button,
+.continue-button,
+.choice-button {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  color: #fff7ed;
+  background: rgba(34, 31, 39, 0.8);
+  cursor: pointer;
+  transition:
+    background 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+.icon-button {
+  min-height: 40px;
+  padding: 0 14px;
+  font-size: 0.68rem;
+}
+
+.dialogue-log {
+  max-height: 34vh;
+  overflow: auto;
+  display: grid;
+  gap: 8px;
+  padding-right: 4px;
+}
+
+.log-line {
+  margin: 0;
+  padding: 10px 12px;
+  border-left: 4px solid var(--character-color);
+  border-radius: 6px;
+  background: rgba(12, 11, 15, 0.62);
+  color: #f7f0e8;
+  font-size: 0.7rem;
+  line-height: 1.7;
+}
+
+.log-speaker {
+  color: var(--character-color);
+  font-weight: 800;
+}
+
+.dialogue-box {
+  min-height: 156px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(20, 18, 25, 0.9);
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.42);
+}
+
+.speaker-name {
+  margin: 0 0 12px;
+  color: var(--speaker-color, #f7f0e8);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.dialogue-text {
+  margin: 0;
+  color: #fffaf3;
+  font-size: clamp(0.82rem, 1.35vw, 1rem);
+  line-height: 1.9;
+}
+
+.choice-list {
+  display: grid;
+  gap: 10px;
+}
+
+.choice-button,
+.continue-button {
+  min-height: 48px;
+  padding: 12px 16px;
+  font-size: 0.72rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.continue-button {
+  justify-self: end;
+  text-align: center;
+}
+
+.choice-button:hover,
+.continue-button:hover,
+.icon-button:hover {
+  border-color: rgba(255, 255, 255, 0.38);
+  background: rgba(60, 54, 72, 0.92);
+  transform: translateY(-1px);
+}
+
+.choice-button:focus-visible,
+.continue-button:focus-visible,
+.icon-button:focus-visible {
+  outline: 3px solid #ffd166;
+  outline-offset: 2px;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .game-shell {
+    padding: 18px;
+  }
+
+  .scene-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .dialogue-box {
+    min-height: 180px;
+    padding: 18px;
+  }
+
+  .continue-button {
+    width: 100%;
+  }
+}
